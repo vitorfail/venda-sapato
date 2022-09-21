@@ -2,3 +2,36 @@
     width: 100vw;
     height: 90vh;
 }
+.painel .banner{
+    width: inherit;
+    height: inherit;
+}
+.painel .banner .container{
+    height: inherit;
+    overflow-x: hidden;
+}
+.painel .banner .container .imagem{
+    height: inherit;   
+}
+.painel .direita, .painel .esquerda{
+    width: 56px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+}
+.painel .direita img, .painel .esquerda img{
+    width: 34px;
+    height: 34px;
+}
+.painel .direita img:hover, .painel .esquerda img:hover{
+    cursor: pointer;
+}
+.painel .direita{
+    right: 0;
+}
+.painel .esquerda{
+    left: 0;
+}

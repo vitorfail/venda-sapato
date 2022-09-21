@@ -29,3 +29,6 @@ code {
   padding: 0;
   font-family: Roboto normal;
 }
+body{
+  overflow-y: scroll;
+}

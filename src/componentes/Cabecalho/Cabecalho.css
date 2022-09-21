@@ -1,9 +1,35 @@
 header{
     width: 100%;
-    width: 70px;
-    background-image: linear-gradient(to top, transparent 70%, black 30%);
+    height: 70px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 100%);
     display: flex;
-    justify-content: space-between;
     position: fixed;
+    justify-content: center;
     z-index: 999;
+    align-items: center;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+header .logo img{
+    width: 43px;
+    height: 43px;
+}
+header .info{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 70%;
+    height: 100%;
+}
+header .info h2{
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
