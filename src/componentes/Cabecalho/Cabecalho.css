@@ -1,0 +1,9 @@
+header{
+    width: 100%;
+    width: 70px;
+    background-image: linear-gradient(to top, transparent 70%, black 30%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+}
