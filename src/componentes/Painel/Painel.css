@@ -3,15 +3,21 @@
     height: 90vh;
 }
 .painel .banner{
+    overflow-y: hidden;
+    overflow-x: hidden;
     width: inherit;
     height: inherit;
 }
 .painel .banner .container{
+    display: flex;
+    transition: all ease 0.4s;
     height: inherit;
-    overflow-x: hidden;
 }
 .painel .banner .container .imagem{
     height: inherit;   
+}
+.painel .banner .container .imagem img{
+    height: 100%;   
 }
 .painel .direita, .painel .esquerda{
     width: 56px;
