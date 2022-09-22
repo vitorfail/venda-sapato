@@ -9,15 +9,26 @@
     height: inherit;
 }
 .painel .banner .container{
-    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     transition: all ease 0.4s;
     height: inherit;
 }
 .painel .banner .container .imagem{
-    height: inherit;   
+    position: relative;
+    float: left;
+    width:100vw;
+    transition: all ease 0.4s;
+    height: inherit;  
+    margin-left: -100%; 
+}
+.painel .banner .container .imagem.ative{
+    margin-left: 0%;
 }
 .painel .banner .container .imagem img{
-    height: 100%;   
+    height: 100vh;
+    width: 100vw;   
 }
 .painel .direita, .painel .esquerda{
     width: 56px;
