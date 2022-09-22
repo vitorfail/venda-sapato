@@ -11,7 +11,27 @@ export default function Painel(){
     const [margemx, setmargemx]= useState(0)
     const [medidatotal, setmedidatotal] = useState(0)
     const [medidaBanner, setmedidaBanner] = useState(0)
+    const [dados,setdados ] = useState([ <div key={1} className='imagem' style={{width:"100vw"}}>
+                        <img  alt='banner' src={Banner1}></img>
+                    </div>,
+                    <div key={2} className='imagem' style={{width:"100vw"}}>
+                        <img  alt='banner' src={Banner2}></img>
+                    </div>,
+                    <div key={3} className='imagem' style={{width:"100vw"}}>
+                        <img  alt='banner' src={Banner3}></img>
+                    </div>])
+    const [index, setindex] = useState(dados.length)
     function moverdireita(){
+        if(index === 2){
+            console.log('passou aqui')
+            let i = dados.length-1
+            let penultimadiv = dados[i]
+            let divcompleta =dados
+            divcompleta.splice(i, 1)
+            setdados(divcompleta.append(penultimadiv))
+        }
+        setindex(index-1)
+
         setmargemx(margemx-window.innerWidth)
     }
     useEffect(() => {
@@ -30,15 +50,7 @@ export default function Painel(){
 
             <div className='banner'>
                 <div className='container' style={{width:medidatotal, marginLeft:margemx}}>
-                    <div className='imagem' style={{width:medidaBanner}}>
-                        <img  alt='banner' src={Banner1}></img>
-                    </div>
-                    <div className='imagem' style={{width:medidaBanner}}>
-                        <img  alt='banner' src={Banner2}></img>
-                    </div>
-                    <div className='imagem' style={{width:medidaBanner}}>
-                        <img  alt='banner' src={Banner3}></img>
-                    </div>
+                    {dados}
                 </div>
             </div>
         </div>
