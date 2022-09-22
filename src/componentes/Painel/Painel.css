@@ -17,14 +17,17 @@
 }
 .painel .banner .container .imagem{
     position: relative;
-    float: left;
+    float: right;
     width:100vw;
-    transition: all ease 0.4s;
+    transition: all ease 0.5s;
     height: inherit;  
-    margin-left: -100%; 
+    margin-right: -100%; 
 }
 .painel .banner .container .imagem.ative{
-    margin-left: 0%;
+    margin-right: 0%;
+}
+.painel .banner .container .imagem.saindo{
+    margin-left: -100%;
 }
 .painel .banner .container .imagem img{
     height: 100vh;

@@ -1,5 +1,5 @@
 import './Painel.css'
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import Direita from '../../icons/direita.png'
 import Esquerda from '../../icons/esquerda.png'
 import Banner1 from '../../icons/banner1.png'
@@ -8,14 +8,19 @@ import Banner3 from '../../icons/banner3.png'
 
 
 export default function Painel(){
-    const [um, setum]= useState('imagem')
-    const [dois, setdois]= useState('imagem')
-    const [tres, settres]= useState('imagem')
+    const ref = useRef([]);
+    const array = [0, 1, 2]
+    const imagens = [Banner1, Banner2, Banner3]
+    const [i, seti] = useState(0)
 
     function moverdireita(){
-        setum('imagem ative')
-        console.log('passou aqui')
+        ref.current[i].className = 'imagem saindo'
+        ref.current[i+1].className = 'imagem ative'
+        seti(i+1)
     }
+    useEffect(() => {
+        ref.current[0].className = 'imagem ative'
+    })
     return(
         <div className='painel'>
             <div className='direita'>
@@ -24,18 +29,13 @@ export default function Painel(){
             <div className='esquerda'>
                 <img alt='esquerda' src={Esquerda} ></img>
             </div>
-
             <div className='banner'>
                 <div className='container'>
-                    <div key={1} className={um}>
-                        <img  alt='banner' src={Banner1}></img>
-                    </div>
-                    <div key={2} className={dois}>
-                        <img  alt='banner' src={Banner2}></img>
-                    </div>
-                    <div key={3} className={tres}>
-                        <img  alt='banner' src={Banner3}></img>
-                    </div>
+                    {array.map((item, index) => {
+                        return(<div ref={(element) => {ref.current[index] = element;}} key={index} className='imagem'>
+                                    <img  alt='banner' src={imagens[index]}></img>
+                                </div>)
+                            })}
                 </div>
             </div>
         </div>
