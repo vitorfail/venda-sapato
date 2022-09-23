@@ -14,12 +14,40 @@ export default function Painel(){
     const [i, seti] = useState(0)
 
     function moverdireita(){
-        ref.current[i].className = 'imagem saindo'
-        ref.current[i+1].className = 'imagem ative'
-        seti(i+1)
+        if(i === array.length-2){
+            ref.current[0].className = 'imagem preparo'
+            var atual = i
+            var proxima = atual+1
+            ref.current[proxima].className = 'imagem ative'
+            ref.current[atual].className = 'imagem saindo'
+            setTimeout(() =>ref.current[atual].className = 'imagem', 700)
+            seti(i+1)
+        }
+        else{
+            if(i === array.length-1){
+                console.log('passou aqui')
+                ref.current[0].className = 'imagem ative'
+                ref.current[i].className = 'imagem saindo'
+                setTimeout(() =>ref.current[i].className = 'imagem', 700)
+
+                seti(0)
+            }
+            else{
+                var atual = i
+                var proxima = atual+1
+                ref.current[proxima].className = 'imagem ative'
+                ref.current[atual].className = 'imagem saindo'
+                setTimeout(() =>ref.current[atual].className = 'imagem', 700)
+                seti(i+1)
+                console.log(i)    
+            }
+        }
     }
     useEffect(() => {
-        ref.current[0].className = 'imagem ative'
+        if(i ===0 ){
+            ref.current[0].className = 'imagem ative'
+            ref.current[1].className = 'imagem preparo'
+        }
     })
     return(
         <div className='painel'>

@@ -9,6 +9,7 @@
     height: inherit;
 }
 .painel .banner .container{
+    display: flex;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -16,6 +17,7 @@
     height: inherit;
 }
 .painel .banner .container .imagem{
+    display: none;
     position: relative;
     float: right;
     width:100vw;
@@ -24,10 +26,19 @@
     margin-right: -100%; 
 }
 .painel .banner .container .imagem.ative{
-    margin-right: 0%;
+    margin-right: 0%; 
+    transition: all ease 0.5s;
+    display: block;
+}
+.painel .banner .container .imagem.preparo{
+    margin-right: -100%; 
+    transition: all ease 0.5s;
+    display: block;
 }
 .painel .banner .container .imagem.saindo{
-    margin-left: -100%;
+    transition: all ease 0.5s;
+    display: block;
+    transform: translateX(-100%);
 }
 .painel .banner .container .imagem img{
     height: 100vh;
