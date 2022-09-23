@@ -27,7 +27,6 @@ export default function Painel(){
                 setTimeout(() =>ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 400)
                 setTimeout(() =>ref.current[i].style.display ='block', 900)
                 seti(0)
-                console.log('passou aqui')
             }
             else{
                 if(i !== 0){
@@ -51,7 +50,6 @@ export default function Painel(){
                 else{
                     ref.current[0].style.transform ='translate3d(-100%, 0,0)'
                     ref.current[0+1].style.transform ='translate3d(-100%, 0,0)'
-                    setTimeout(() =>ref.current[0].style.transform ='translate3d(0%, 0,0)', 500)
                     seti(i+1)  
                 }
             }
@@ -62,7 +60,7 @@ export default function Painel(){
 
         let dist = (-100*(i-1))
         ref.current[i].style.transform ='translate3d('+dist+'%, 0,0)'
-        setTimeout(() => { ref.current[i-1].style.transform ='translate3d('+dist+'%, 0,0)'}, 500)
+        ref.current[i-1].style.transform ='translate3d('+dist+'%, 0,0)'
         seti(i-1)    
 
     }
