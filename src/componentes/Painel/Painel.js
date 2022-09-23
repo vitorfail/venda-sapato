@@ -19,24 +19,24 @@ export default function Painel(){
         if(ativodireita === false){
             setativodireita(true)
             if(i+1 === imagens.length){
-                ref.current[i].style.transform ='translate3d(-300%, 0,0)'
+                let dist = (100*(i+1))
+
+                ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)'
                 ref.current[0].style.transform ='translate3d(0%, 0,0)'
                 setTimeout(() =>ref.current[i].style.display ='none', 400)
-                setTimeout(() =>ref.current[i].style.transform ='translate3d(100%, 0,0)', 500)
+                setTimeout(() =>ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 400)
                 setTimeout(() =>ref.current[i].style.display ='block', 900)
                 seti(0)
                 console.log('passou aqui')
             }
             else{
                 if(i !== 0){
-                    console.log(imagens.length)
-                    console.log(i)
                     if(i+2 === imagens.length){
                         let dist = (100*(i+1))
                         ref.current[i+1].style.transform ='translate3d(-'+dist+'%, 0,0)'
                         setTimeout(() => ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 100)
-                        setTimeout(() => ref.current[0].style.transform ='translate3d(0%, 0,0)' , 500)
-                        setTimeout(() =>ref.current[i].style.transform ='translate3d(100%, 0,0)', 500)
+                        setTimeout(() => ref.current[0].style.transform ='translate3d(100%, 0,0)' , 500)
+                        setTimeout(() =>ref.current[i].style.transform ='translate3d(0%, 0,0)', 500)
                         seti(i+1)    
         
                     }
@@ -44,14 +44,14 @@ export default function Painel(){
                         let dist = (100*(i+1))
                         ref.current[i+1].style.transform ='translate3d(-'+dist+'%, 0,0)'
                         setTimeout(() => ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 100)
-                        setTimeout(() =>ref.current[i].style.transform ='translate3d(100%, 0,0)', 500)
+                        setTimeout(() =>ref.current[i].style.transform ='translate3d(0%, 0,0)', 500)
                         seti(i+1)        
                     }
                 }
                 else{
                     ref.current[0].style.transform ='translate3d(-100%, 0,0)'
                     ref.current[0+1].style.transform ='translate3d(-100%, 0,0)'
-                    setTimeout(() =>ref.current[0].style.transform ='translate3d(100%, 0,0)', 500)
+                    setTimeout(() =>ref.current[0].style.transform ='translate3d(0%, 0,0)', 500)
                     seti(i+1)  
                 }
             }
