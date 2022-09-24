@@ -67,12 +67,44 @@ export default function Painel(){
         }
     }
     function moveresquerda(){
-
-        let dist = (-100*(i-1))
-        ref.current[i].style.transform ='translate3d('+dist+'%, 0,0)'
-        ref.current[i-1].style.transform ='translate3d('+dist+'%, 0,0)'
-        seti(i-1)    
-
+        if(ativodireita === false){
+            if(i == 0 ){
+                for(var h = 0; h< imagens.length; h++){
+                    if(h === imagens.length-1){
+                        ref.current[h].style.transform ='translate3d(-'+((h)*100)+'%, 0,0)'
+                        console.log('p aqui')
+                    }
+                    else{
+                        if(h === 0){
+                            ref.current[0].style.transform ='translate3d(-100%, 0,0)'
+                        }
+                        else{
+                            ref.current[h].style.transform ='translate3d(-'+((h+1)*100)+'%, 0,0)' 
+                        }
+                    }
+                }
+                seti(imagens.length-1)
+            }
+            else{
+                if(i+1 === imagens.length){
+                    setativodireita(true)
+                    let dist = (-100*(i-1))
+                    ref.current[i].style.transform ='translate3d('+dist+'%, 0,0)'
+                    ref.current[i-1].style.transform ='translate3d('+dist+'%, 0,0)'
+                    seti(i-1)        
+                    setTimeout(() => { setativodireita(false)}, 1000);        
+                    ref.current[0].style.transform ='translate3d(-100%, 0,0)'
+                }
+                else{
+                    setativodireita(true)
+                    let dist = (-100*(i-1))
+                    ref.current[i].style.transform ='translate3d('+dist+'%, 0,0)'
+                    ref.current[i-1].style.transform ='translate3d('+dist+'%, 0,0)'
+                    seti(i-1)        
+                    setTimeout(() => { setativodireita(false)}, 1000);        
+                }
+            }
+        }
     }
     useEffect(() => {
         if(i === 0){
@@ -90,7 +122,7 @@ export default function Painel(){
             <div className='banner'>
                 <div className='container'>
                     {array.map((item, index) => {
-                        return(<div ref={(element) => {ref.current[index] = element;}} style={{background:'url('+imagens[index]+') no-repeat center'}} key={index} className='imagem'>
+                        return(<div ref={(element) => {ref.current[index] = element;}} style={{backgroundImage:'url('+imagens[index]+')'}} key={index} className='imagem'>
                                 </div>)
                             })}
                 </div>

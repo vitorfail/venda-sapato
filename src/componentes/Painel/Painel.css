@@ -12,8 +12,8 @@
     height: inherit;
 }
 .painel .banner .container{
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: inherit;
     margin: 0;
     display: flex;
     position: relative;
@@ -24,6 +24,9 @@
     flex-shrink: 0;
     position: relative;
     width:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     transition: all ease 0.5s;
     height: inherit;  
     margin: 0;
