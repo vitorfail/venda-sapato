@@ -1,13 +1,22 @@
 .quem{
     width: 100%;
     height: 560px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .quem h1{
     text-align: center;
 }
+.quem .titulo{
+    height: 20%;
+}
+.quem .info{
+    height: 40%;
+}
+.quem .titulo, .quem .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .quem h3{
+    width: 50%;
     text-align: center;
 }
