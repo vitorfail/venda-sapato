@@ -20,13 +20,22 @@ export default function Painel(){
             setativodireita(true)
             if(i+1 === imagens.length){
                 let dist = (100*(i+1))
-
                 ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)'
-                ref.current[0].style.transform ='translate3d(-'+dist+'%, 0,0)'
-                //ref.current[1].style.display ='none'
-                //setTimeout(() => {ref.current[0].style.transform ='translate3d(0%, 0,0)'}, 1000)
-                //setTimeout(() => {ref.current[1].style.transform ='translate3d(0%, 0,0)'; ref.current[1].style.display ='block'}, 400)
-                //setTimeout(() =>ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 400)
+                ref.current[0].style.transform ='translate3d(0%, 0,0)'
+                let quantidade_imagens = imagens.length
+                setTimeout(() => {
+                    for(var o = 1; o< quantidade_imagens;o++){
+                        ref.current[o].style.display ='none'
+                    }
+                    setTimeout(() => {
+                        for(var o = 1; o< quantidade_imagens;o++){
+                            ref.current[o].style.transform ='translate3d(0%, 0,0)'
+                        }
+                        for(var o = 1; o< quantidade_imagens;o++){
+                            ref.current[o].style.display ='block'
+                        }
+                    }, 100)
+                }, 800)
                 seti(0)
             }
             else{
