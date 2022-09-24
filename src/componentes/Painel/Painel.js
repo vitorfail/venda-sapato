@@ -90,8 +90,7 @@ export default function Painel(){
             <div className='banner'>
                 <div className='container'>
                     {array.map((item, index) => {
-                        return(<div ref={(element) => {ref.current[index] = element;}} key={index} className='imagem'>
-                                    <img  alt='banner' src={imagens[index]}></img>
+                        return(<div ref={(element) => {ref.current[index] = element;}} style={{background:'url('+imagens[index]+') no-repeat center'}} key={index} className='imagem'>
                                 </div>)
                             })}
                 </div>

@@ -28,11 +28,6 @@
     height: inherit;  
     margin: 0;
 }
-.painel .banner .container .imagem img{
-    margin: 0;
-    height: 100%;
-    width: 100%;   
-}
 .painel .direita, .painel .esquerda{
     width: 56px;
     height: inherit;
