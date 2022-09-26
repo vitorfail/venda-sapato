@@ -8,6 +8,9 @@ header{
     z-index: 999;
     align-items: center;
 }
+header.black{
+    background: rgb(22, 22, 39);
+}
 header .logo{
     display: flex;
     justify-content: center;
@@ -16,8 +19,8 @@ header .logo{
     height: 100%;
 }
 header .logo img{
-    width: 43px;
-    height: 43px;
+    width: 149px;
+    height: 27px;
 }
 header .info{
     align-items: center;

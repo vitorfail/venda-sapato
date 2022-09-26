@@ -1,10 +1,25 @@
 import './Cabecalho.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../icons/logo.png'
 
 export default function Cabecalho(){
+    const [ header, setheader] = useState(false)
+    useEffect(() =>{
+        const rolagem = () =>{
+            if(window.scrollY> 10){
+                setheader(true)
+            }
+            else{
+                setheader(false)
+            }
+        }
+        window.addEventListener("scroll", rolagem)
+        return () => {
+          window.removeEventListener("scroll", rolagem)
+        }
+    })
     return(
-        <header>
+        <header className={header? 'black':''}>
             <div className='logo'>
                 <img src={Logo}></img>
             </div>

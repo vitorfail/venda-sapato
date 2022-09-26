@@ -5,28 +5,29 @@ import Painel from '../../componentes/Painel/Painel'
 import { CarroselInfinito } from '../../componentes/CarroselInfinito/CarroselInfinito'
 import Sede from '../../icons/sede.jpg'
 import Banner1 from '../../icons/banner1.png'
-import Banner2 from '../../icons/banner2.jpg'
+import Banner2 from '../../icons/banner2.png'
 import Banner3 from '../../icons/banner3.png'
 import Banner4 from '../../icons/banner4.jpg'
 import Banner5 from '../../icons/banner5.jpg'
 import AparecerEsquerda from '../../componentes/AparecerScroll/AparecerEsquerda/AparecerEsquerda'
 import AparecerDireita from '../../componentes/AparecerScroll/AparecerDireita/AparecerDireita'
 import AparecerCima from '../../componentes/AparecerScroll/AparecerCima/AparecerCima'
-import AparecerBaixo from '../../componentes/AparecerScroll/AparecerBaixo/AparecerBaixo'
+import Tennis1 from '../../icons/tennis.png'
+import Tennis2 from '../../icons/tennis2.png'
+import Tennis3 from '../../icons/tennis3.png'
+import Tennis4 from '../../icons/tennis4.png'
+import Tennis5 from '../../icons/tennis5.png'
+import Tennis6 from '../../icons/tennis6.png'
+import Tennis7 from '../../icons/tennis7.png'
+import Tennis8 from '../../icons/tennis8.png'
+import Rodape from '../../componentes/Rodape/Rodape'
 
 
 export default function Home(){
     useEffect(() =>{
     })
     const fotos_ = [Banner1, Banner2, Banner3, Banner4, Banner5]
-    const fotos_produtos = ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png", 
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png","https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"]
+    const fotos_produtos = [Tennis1, Tennis2, Tennis3, Tennis4, Tennis5, Tennis6, Tennis7, Tennis8]
     return(
         <div style={{overflowX:'hidden'}}>
             <Cabecalho></Cabecalho>
@@ -60,9 +61,8 @@ export default function Home(){
                     <h1 style={{textAlign:'center'}}>Produtos em destaque</h1>
                 </div>
             </AparecerCima>
-            <AparecerBaixo>
-                <CarroselInfinito largura={'50%'} fotos={fotos_produtos}></CarroselInfinito>
-            </AparecerBaixo>
+            <CarroselInfinito largura={'50%'} fotos={fotos_produtos}></CarroselInfinito>
+            <Rodape></Rodape>
         </div>
     )
 }

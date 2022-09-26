@@ -101,8 +101,7 @@ export default function Painel(props){
         }
     }
     useEffect(() => {
-        if(i === 0){
-        }
+        setTimeout(() => moverdireita(), 2600)
 
     })
     return(
