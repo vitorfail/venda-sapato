@@ -1,0 +1,16 @@
+#direita{
+    opacity: 1;
+    transition: all ease 0.2s;
+    animation: aparecer-direita ease-in-out 0.5s;
+}
+
+@keyframes aparecer-direita{
+    0%{
+        opacity: 0.1;
+        transform: translateX(300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

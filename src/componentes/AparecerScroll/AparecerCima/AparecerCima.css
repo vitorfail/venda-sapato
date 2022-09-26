@@ -1,0 +1,16 @@
+#cima{
+    opacity: 1;
+    transition: all ease 0.2s;
+    animation: cima ease-in-out 0.5s;
+}
+
+@keyframes cima{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -2,16 +2,10 @@ import './Painel.css'
 import React, {useState, useRef, useEffect} from 'react'
 import Direita from '../../icons/direita.png'
 import Esquerda from '../../icons/esquerda.png'
-import Banner1 from '../../icons/banner1.png'
-import Banner2 from '../../icons/banner2.jpg'
-import Banner3 from '../../icons/banner3.png'
-import Banner4 from '../../icons/banner4.jpg'
-import Banner5 from '../../icons/banner5.jpg'
 
-export default function Painel(){
+export default function Painel(props){
     const ref = useRef([]);
-    const array = [0, 1, 2, 3, 4]
-    const imagens = [Banner1, Banner2, Banner3, Banner4, Banner5]
+    const imagens = props.fotos
     const [ ativodireita, setativodireita] = useState(false)
     const [i, seti] = useState(0)
 
@@ -121,8 +115,8 @@ export default function Painel(){
             </div>
             <div className='banner'>
                 <div className='container'>
-                    {array.map((item, index) => {
-                        return(<div ref={(element) => {ref.current[index] = element;}} style={{backgroundImage:'url('+imagens[index]+')'}} key={index} className='imagem'>
+                    {imagens.map((item, index) => {
+                        return(<div ref={(element) => {ref.current[index] = element;}} style={{backgroundImage:'url('+item+')'}} key={index} className='imagem'>
                                 </div>)
                             })}
                 </div>
