@@ -1,6 +1,6 @@
 import Cabecalho from '../../componentes/Cabecalho/Cabecalho'
 import './Home.css'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Painel from '../../componentes/Painel/Painel'
 import { CarroselInfinito } from '../../componentes/CarroselInfinito/CarroselInfinito'
 import Banner1 from '../../icons/banner1.png'
@@ -20,12 +20,17 @@ import Tennis6 from '../../icons/tennis6.png'
 import Tennis7 from '../../icons/tennis7.png'
 import Tennis8 from '../../icons/tennis8.png'
 import Rodape from '../../componentes/Rodape/Rodape'
-import Nike from '../../icons/nike.png'
-
+import logo from '../../icons/nike.png'
+import Adidas from '../../logos/adidas.png'
+import Nike from '../../logos/nike.png'
+import Converse from '../../logos/converse.png'
+import Lacoste from '../../logos/lacoste.png'
+import Oakley from '../../logos/oakley.png'
+import Pulma from '../../logos/pulma.png'
+import Vans from '../../logos/vans.png'
+import Terno from '../../icons/caraterno.jpg'
 
 export default function Home(){
-    useEffect(() =>{
-    })
     const fotos_ = [Banner1, Banner2, Banner3, Banner4, Banner5]
     const fotos_produtos = [Tennis1, Tennis2, Tennis3, Tennis4, Tennis5, Tennis6, Tennis7, Tennis8]
     return(
@@ -33,13 +38,19 @@ export default function Home(){
             <Cabecalho></Cabecalho>
             <Painel fotos={fotos_}></Painel>
             <section className='logos'>
-                
+                <img alt='Adidas' src={Adidas}></img>
+                <img alt='Nike' src={Nike}></img>
+                <img alt='Converse' src={Converse}></img>
+                <img alt='Lacoste' src={Lacoste}></img>
+                <img alt='Oakley' src={Oakley}></img>
+                <img alt='Pulma' src={Pulma}></img>
+                <img alt='Vans' src={Vans}></img>
             </section>
             <div className='quem'>
                 <div className='titulo'>
                     <h1><strong>QUEM SOMOS</strong></h1>
                 </div>
-                <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'70%'}}>
+                <div className='quadro'>
                     <AparecerEsquerda>
                         <div className='left'>
                             <div className='info'>
@@ -84,7 +95,18 @@ export default function Home(){
                     </div>
                 </div>
                 <div className='right'>
-                    <img alt='tenis' src={Nike}></img>
+                    <img alt='tenis' src={logo}></img>
+                </div>
+            </div>
+            <div className='rh'>
+                <div>
+                    <h2>Nossos funcionários</h2>
+                </div>
+                <div>
+                    <div className='card'>
+                        <img alt='funcionario' src={Terno}></img>
+                        <h3>Funcionário do mês</h3>
+                    </div>
                 </div>
             </div>
             <AparecerCima>

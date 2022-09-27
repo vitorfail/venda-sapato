@@ -3,13 +3,19 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 450px;
+    min-height: 450px;
+}
+.quem .quadro{
+    margin-top: 83px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70%;
 }
 .quem h1{
     text-align: center;
 }
 .quem .titulo{
-    margin-bottom: 34px;
     height: 10px;
 }
 .quem .titulo strong{
@@ -19,7 +25,7 @@
 }
 .quem .titulo h1::before{
     content: "";
-    position: absolute;
+    position: relative;
     display: block;
     width: 120px;
     height: 1px;
@@ -28,13 +34,13 @@
     left: calc(50% - 60px);
 }
 .quem .titulo h1::after{
+    position: relative;
     content: "";
-    position: absolute;
     display: block;
     width: 40px;
     height: 3px;
     background: #e46647;
-    bottom: -61px;
+    bottom: -20px;
     left: calc(50% - 20px);
 }
 .quem .info{
@@ -139,12 +145,72 @@
     justify-content: center;
     background: #f3f5fa;
     width: 100%;
-    height: 80px;
+    min-height: 100px;
 }
 .logos img{
-    height: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+    transition: all ease 0.2s;
+    height: 80%;
+    width: 160px;
+    scale: 0.7;
 }
-
+.logos img:hover{
+    scale: 0.9;
+}
+.rh{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 640px;
+}
+.rh h2{
+    margin: 10px;
+    font-size: 30px;
+    font-family: Roboto normal;
+}
+.rh h2::before{
+    content: "";
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: -60px;
+    left: calc(50% - 60px);
+}
+.rh h2::after{
+    content: "";
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e46647;
+    bottom: -21px;
+    left: calc(50% - 20px);
+}
+.rh .card{
+    align-items: center;
+    margin: 10px;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.rh .card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.rh .card h3{
+    text-align: center;
+    width: 100%;
+}
 @keyframes flutuar{
     0%{
         transform: translateY(-30px);
@@ -154,5 +220,11 @@
     }
     100%{
         transform: translateY(-30px);
+    }
+}
+@media screen and (max-width:900px){
+    .quem .quadro{
+
+        flex-direction: column;
     }
 }
