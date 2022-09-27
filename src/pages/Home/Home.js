@@ -33,28 +33,41 @@ export default function Home(){
             <Cabecalho></Cabecalho>
             <Painel fotos={fotos_}></Painel>
             <div className='quem'>
-                <AparecerEsquerda>
-                    <div className='left'>
-                        <div className='titulo'>
-                            <h1><strong>Quem somos</strong></h1>
+                <div className='titulo'>
+                    <h1><strong>QUEM SOMOS</strong></h1>
+                </div>
+                <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'70%'}}>
+                    <AparecerEsquerda>
+                        <div className='left'>
+                            <div className='info'>
+                                <h3>Netshoes é uma empresa brasileira de comércio eletrônico de artigos esportivos fundada em 
+                                    fevereiro de 2000 por Marcio Kumruian e Hagop Chabab e adquirido pela Magazine Luiza em 2019. 
+                                    A Netshoes possui centros de distribuições no Brasil, e administra as lojas oficiais dos clubes 
+                                    de futebol como Santos Futebol Clube, Corinthians, São Paulo Futebol Clube, Palmeiras, Internacional, 
+                                    Cruzeiro, Vasco da Gama, Coritiba, Cruz Azul, Chivas, Monterrey, River Plate, San Lorenzo e América do México. 
+                                    É também representante oficial dos produtos da National Basketball Association (NBA) na América Latina e responsável 
+                                    pela administração das lojas virtuais das marcas Puma, Havaianas, Globo Esporte, Oakley, Timberland,
+                                    Topper, Kappa Mizuno e UFC. Também trabalha com calçados,acessórios para esportes e eletrônicos.</h3>
+                            </div>
                         </div>
-                        <div className='info'>
-                            <h3>Netshoes é uma empresa brasileira de comércio eletrônico de artigos esportivos fundada em 
-                                fevereiro de 2000 por Marcio Kumruian e Hagop Chabab e adquirido pela Magazine Luiza em 2019. 
-                                A Netshoes possui centros de distribuições no Brasil, e administra as lojas oficiais dos clubes 
-                                de futebol como Santos Futebol Clube, Corinthians, São Paulo Futebol Clube, Palmeiras, Internacional, 
-                                Cruzeiro, Vasco da Gama, Coritiba, Cruz Azul, Chivas, Monterrey, River Plate, San Lorenzo e América do México. 
-                                É também representante oficial dos produtos da National Basketball Association (NBA) na América Latina e responsável 
-                                pela administração das lojas virtuais das marcas Puma, Havaianas, Globo Esporte, Oakley, Timberland,
-                                Topper, Kappa Mizuno e UFC. Também trabalha com calçados,acessórios para esportes e eletrônicos.</h3>
+                    </AparecerEsquerda>
+                    <AparecerDireita>
+                        <div className='sede-direita'>
+                            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                                <h2>Missão</h2>
+                                <h3>INSPIRAR E TRANSFORMAR A VIDA DAS PESSOAS COM ESPORTE E LAZER.</h3>
+                            </div>
+                            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                                <h2>Visão</h2>
+                                <h3>A MELHOR E MAIS INOVADORA EXPERIÊNCIA DE COMPRA DO VAREJO ESPORTIVO.</h3>
+                            </div>
+                            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                                <h2>Valores</h2>
+                                <h3>ADRENALINA, ESPÍRITO DE EQUIPE, INSPIRAÇÃO E FOCO.</h3>
+                            </div>
                         </div>
-                    </div>
-                </AparecerEsquerda>
-                <AparecerDireita>
-                    <div className='sede-direita'>
-                        <img src={Sede}></img>
-                    </div>
-                </AparecerDireita>
+                    </AparecerDireita>
+                </div>
             </div>
             <AparecerCima>
                 <div className='produto-destaque' style={{width:'100%', display:'flex', justifyContent:'center'}}>

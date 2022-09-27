@@ -18,14 +18,14 @@ export default function Painel(props){
                 ref.current[0].style.transform ='translate3d(0%, 0,0)'
                 let quantidade_imagens = imagens.length
                 setTimeout(() => {
-                    for(var o = 1; o< quantidade_imagens;o++){
+                    for(let o = 1; o< quantidade_imagens;o++){
                         ref.current[o].style.display ='none'
                     }
                     setTimeout(() => {
-                        for(var o = 1; o< quantidade_imagens;o++){
+                        for(let o = 1; o< quantidade_imagens;o++){
                             ref.current[o].style.transform ='translate3d(0%, 0,0)'
                         }
-                        for(var o = 1; o< quantidade_imagens;o++){
+                        for(let o = 1; o< quantidade_imagens;o++){
                             ref.current[o].style.display ='block'
                         }
                     }, 100)
@@ -36,7 +36,6 @@ export default function Painel(props){
                 if(i !== 0){
                     if(i+2 === imagens.length){
                         let dist = (100*(i+1))
-                        let df =100*(i)
                         ref.current[i+1].style.transform ='translate3d(-'+dist+'%, 0,0)'
                         setTimeout(() => ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 100)
                         setTimeout(() => ref.current[0].style.transform ='translate3d(100%, 0,0)' , 500)
@@ -62,7 +61,7 @@ export default function Painel(props){
     }
     function moveresquerda(){
         if(ativodireita === false){
-            if(i == 0 ){
+            if(i === 0 ){
                 for(var h = 0; h< imagens.length; h++){
                     if(h === imagens.length-1){
                         ref.current[h].style.transform ='translate3d(-'+((h)*100)+'%, 0,0)'

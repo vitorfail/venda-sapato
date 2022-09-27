@@ -13,7 +13,7 @@ const AparecerEsquerda = (props) =>{
                         setativo(true)    
                     }
                 }
-                if(position.bottom-(position.bottom*0.4) > window.innerHeight){
+                if(position.bottom-(position.bottom*0.3) > window.innerHeight){
                     d[0].id = ''
                     setativo(false)    
                 }

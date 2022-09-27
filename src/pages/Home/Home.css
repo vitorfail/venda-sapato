@@ -1,37 +1,63 @@
 .quem{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top: 73px;
     width: 100%;
-    height: 560px;
+    height: 760px;
 }
 .quem h1{
     text-align: center;
 }
 .quem .titulo{
-    height: 20%;
+    height: 10px;
 }
 .quem .titulo h1{
+    font-weight: bold;
     font-size: 33px;
+}
+.quem .titulo h1::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: -100px;
+    left: calc(50% - 60px);
+}
+.quem .titulo h1::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: -101px;
+    left: calc(50% - 20px);
 }
 .quem .info{
     font-size: 13px;
-    padding-top: 73px;
-    height: 40%;
+    height: 100%;
 }
 .quem .left{
+    width: 50%;
     opacity: 0;
 }
 .quem .sede-direita{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
     opacity: 0;
 }
 .produto-destaque{
     opacity: 0;
 }
 .quem .sede-direita img{
-    margin: 10px;
-    height: 350px;
-    width: 600px;
+    margin-right: 80px;
+    height: 100%;
+    width: 400px;
 }
 
 .quem .titulo, .quem .info{
@@ -42,6 +68,6 @@
 .quem h3{
     font-size: 17px;
     color: rgb(66, 66, 66);
-    width: 70%;
-    text-align: center;
+    width: 90%;
+    text-align: left;
 }

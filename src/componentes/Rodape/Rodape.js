@@ -22,9 +22,9 @@ export default function Rodape(){
                 <div className="redes">
                     <h2><strong>Contatos</strong></h2>
                     <div style={{display:'flex'}}>
-                        <img src={Insta}></img>
-                        <img src={Twittter}></img>
-                        <img src={Face}></img>
+                        <img alt="insta" src={Insta}></img>
+                        <img alt='tweiter' src={Twittter}></img>
+                        <img alt="face" src={Face}></img>
                     </div>
                 </div>
             </div>

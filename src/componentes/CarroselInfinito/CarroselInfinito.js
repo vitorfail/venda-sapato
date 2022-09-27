@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AparecerBaixo from "../AparecerScroll/AparecerBaixo/AparecerBaixo";
 import './CarroselInfinito.scss'
 
