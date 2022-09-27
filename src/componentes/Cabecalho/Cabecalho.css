@@ -9,7 +9,7 @@ header{
     align-items: center;
 }
 header.black{
-    background: rgb(22, 22, 39);
+    background: rgb(22, 22, 39,0.94);
 }
 header .logo{
     display: flex;

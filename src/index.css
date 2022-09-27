@@ -25,7 +25,7 @@ code {
 }
 @font-face {
   font-family: Roboto forte;
-  src: url('./font/Roboto-Medium.ttf');
+  src: url('./font/Roboto-BoldCondensed.ttf');
 }
 *{
   box-sizing: border-box;

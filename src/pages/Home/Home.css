@@ -3,15 +3,17 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 760px;
+    height: 450px;
 }
 .quem h1{
     text-align: center;
 }
 .quem .titulo{
+    margin-bottom: 34px;
     height: 10px;
 }
-.quem .titulo h1{
+.quem .titulo strong{
+    font-family: Roboto fina;
     font-weight: bold;
     font-size: 33px;
 }
@@ -22,7 +24,7 @@
     width: 120px;
     height: 1px;
     background: #ddd;
-    bottom: -100px;
+    bottom: -60px;
     left: calc(50% - 60px);
 }
 .quem .titulo h1::after{
@@ -31,43 +33,126 @@
     display: block;
     width: 40px;
     height: 3px;
-    background: #47b2e4;
-    bottom: -101px;
+    background: #e46647;
+    bottom: -61px;
     left: calc(50% - 20px);
 }
 .quem .info{
-    font-size: 13px;
     height: 100%;
 }
 .quem .left{
+    padding-right: 16px;
+    height: 60%;
     width: 50%;
     opacity: 0;
 }
 .quem .sede-direita{
+    padding-left: 16px;
     width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 60%;
     opacity: 0;
+}
+.quem .sede-direita .misao-visao-valores{
+    margin-bottom: 23px;
+    display:flex; 
+    flex-direction:column; 
+    align-items:baseline; 
+    justify-content:'left';
 }
 .produto-destaque{
     opacity: 0;
 }
-.quem .sede-direita img{
-    margin-right: 80px;
-    height: 100%;
-    width: 400px;
+.quem .titulo{
+    display: flex;
+    justify-content: center;
 }
-
-.quem .titulo, .quem .info{
+.quem .info{
+    display: flex;
+    justify-content: right;
+}
+.quem .info p{
+    line-height: 1.4;
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    width: 90%;
+    text-align: justify;
+}
+.qualidade{
+    background: #f1eae6;;
+    width: 100%;
+    height: 650px;
+    display: flex;
+}
+.qualidade .left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.qualidade .left h1, .qualidade .left h3{
+    margin-bottom: 15px;
+    margin-left: 65px;
+}
+.qualidade .left h1 strong{
+    font-family: Roboto forte;
+}
+.qualidade .right{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    height: 100%;
 }
-.quem h3{
-    font-size: 17px;
-    color: rgb(66, 66, 66);
-    width: 90%;
-    text-align: left;
+.qualidade .right img{
+    transition: all ease 0.2s;
+    animation: flutuar 3s linear infinite;
+    width: 80%;
+    height: 80%;
+}
+.qualidade .left .vantagens{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+.qualidade .left .vantagens h3{
+    color: black;
+    font-size: 19px;
+    text-align: start;
+    border-radius: 14px;
+    background: white;
+    height: 45px;
+}
+.qualidade .left .vantagens h3 strong{
+    font-size: 30px;
+}
+.logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #f3f5fa;
+    width: 100%;
+    height: 80px;
+}
+.logos img{
+    height: 100%;
+}
+
+@keyframes flutuar{
+    0%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-30px);
+    }
 }

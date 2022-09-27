@@ -3,7 +3,6 @@ import './Home.css'
 import React, { useEffect } from 'react'
 import Painel from '../../componentes/Painel/Painel'
 import { CarroselInfinito } from '../../componentes/CarroselInfinito/CarroselInfinito'
-import Sede from '../../icons/sede.jpg'
 import Banner1 from '../../icons/banner1.png'
 import Banner2 from '../../icons/banner2.png'
 import Banner3 from '../../icons/banner3.png'
@@ -21,6 +20,7 @@ import Tennis6 from '../../icons/tennis6.png'
 import Tennis7 from '../../icons/tennis7.png'
 import Tennis8 from '../../icons/tennis8.png'
 import Rodape from '../../componentes/Rodape/Rodape'
+import Nike from '../../icons/nike.png'
 
 
 export default function Home(){
@@ -32,6 +32,9 @@ export default function Home(){
         <div style={{overflowX:'hidden'}}>
             <Cabecalho></Cabecalho>
             <Painel fotos={fotos_}></Painel>
+            <section className='logos'>
+                
+            </section>
             <div className='quem'>
                 <div className='titulo'>
                     <h1><strong>QUEM SOMOS</strong></h1>
@@ -40,33 +43,48 @@ export default function Home(){
                     <AparecerEsquerda>
                         <div className='left'>
                             <div className='info'>
-                                <h3>Netshoes é uma empresa brasileira de comércio eletrônico de artigos esportivos fundada em 
+                                <p>Netshoes é uma empresa brasileira de comércio eletrônico de artigos esportivos fundada em 
                                     fevereiro de 2000 por Marcio Kumruian e Hagop Chabab e adquirido pela Magazine Luiza em 2019. 
                                     A Netshoes possui centros de distribuições no Brasil, e administra as lojas oficiais dos clubes 
                                     de futebol como Santos Futebol Clube, Corinthians, São Paulo Futebol Clube, Palmeiras, Internacional, 
                                     Cruzeiro, Vasco da Gama, Coritiba, Cruz Azul, Chivas, Monterrey, River Plate, San Lorenzo e América do México. 
                                     É também representante oficial dos produtos da National Basketball Association (NBA) na América Latina e responsável 
                                     pela administração das lojas virtuais das marcas Puma, Havaianas, Globo Esporte, Oakley, Timberland,
-                                    Topper, Kappa Mizuno e UFC. Também trabalha com calçados,acessórios para esportes e eletrônicos.</h3>
+                                    Topper, Kappa Mizuno e UFC. Também trabalha com calçados,acessórios para esportes e eletrônicos.</p>
                             </div>
                         </div>
                     </AparecerEsquerda>
                     <AparecerDireita>
                         <div className='sede-direita'>
-                            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-                                <h2>Missão</h2>
-                                <h3>INSPIRAR E TRANSFORMAR A VIDA DAS PESSOAS COM ESPORTE E LAZER.</h3>
+                            <div className='misao-visao-valores'>
+
+                                <h2 style={{textAlign:'left'}}>Missão</h2>
+                                <h3 style={{textAlign:'left'}}><strong>☑</strong>Inspirar e transformar a vida das pessoas com esporte e lazer.</h3>
                             </div>
-                            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-                                <h2>Visão</h2>
-                                <h3>A MELHOR E MAIS INOVADORA EXPERIÊNCIA DE COMPRA DO VAREJO ESPORTIVO.</h3>
+                            <div className='misao-visao-valores'>
+                                <h2 style={{textAlign:'left'}}>Visão</h2>
+                                <h3 style={{textAlign:'left'}}><strong>☑</strong>A melhor e mais inovadora experiência de compra do varejo esportivo.</h3>
                             </div>
-                            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-                                <h2>Valores</h2>
-                                <h3>ADRENALINA, ESPÍRITO DE EQUIPE, INSPIRAÇÃO E FOCO.</h3>
+                            <div className='misao-visao-valores'>
+                                <h2 style={{textAlign:'left'}}>Valores</h2>
+                                <h3 style={{textAlign:'left'}}><strong>☑</strong>Adrenalina, espírito de equipe, inspiração e foco.</h3>
                             </div>
                         </div>
                     </AparecerDireita>
+                </div>
+            </div>
+            <div className='qualidade'>
+                <div className='left'>
+                    <h1>Nossa maior qualidade é a <strong>velocidade de entrega</strong></h1>
+                    <h3>Sabemos o quanto os serviços de entrega brasileiro são defasados por conta das vias precárias, mas mesmo assim entregamos no prazo e com qualidade</h3>
+                    <div className='vantagens'>
+                        <h3><strong>◈</strong> Entraga em até 13 dias</h3>
+                        <h3><strong>◈</strong> Devolução em caso de danos</h3>
+                        <h3><strong>◈</strong> Acompanhamento pelo site</h3>
+                    </div>
+                </div>
+                <div className='right'>
+                    <img alt='tenis' src={Nike}></img>
                 </div>
             </div>
             <AparecerCima>
