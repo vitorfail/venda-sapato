@@ -2,35 +2,6 @@
     width: 100vw;
     height: 80vh;
 }
-.painel .banner{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    width: inherit;
-    height: inherit;
-}
-.painel .banner .container{
-    width: 100%;
-    height: inherit;
-    margin: 0;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    transition: all ease 0.4s;
-}
-.painel .banner .container .imagem{
-    flex-shrink: 0;
-    position: relative;
-    width:100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: all ease 0.5s;
-    height: inherit;  
-    margin: 0;
-}
 .painel .direita, .painel .esquerda{
     width: 56px;
     height: inherit;
@@ -52,4 +23,8 @@
 }
 .painel .esquerda{
     left: 0;
+}
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
 }

@@ -32,7 +32,6 @@ import Terno from '../../icons/caraterno.jpg'
 import Terno2 from '../../icons/terno.jpg'
 import Terno3 from '../../icons/mulher.jpg'
 
-
 export default function Home(){
     const fotos_ = [Banner1, Banner2, Banner3, Banner4, Banner5]
     const fotos_produtos = [Tennis1, Tennis2, Tennis3, Tennis4, Tennis5, Tennis6, Tennis7, Tennis8]
@@ -159,6 +158,10 @@ export default function Home(){
                                 de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
                         </div>
                     </AparecerCima>
+                </div>
+            </div>
+            <div className='sede'>
+                <div className='info2'>
                 </div>
             </div>
             <AparecerCima>
