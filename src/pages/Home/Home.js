@@ -102,7 +102,7 @@ export default function Home(){
                 <div>
                     <h2>Nossos funcionários</h2>
                 </div>
-                <div>
+                <div style={{display:'flex'}}>
                     <div className='card'>
                         <img alt='funcionario' src={Terno}></img>
                         <h3 className='nome'>FLÁVIO ANDRADE</h3>
