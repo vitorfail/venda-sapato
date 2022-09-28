@@ -6,14 +6,14 @@ $animationSpeed: 8s;
 // Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 3))}
+	100% { transform: translateX(calc(-850px * 5))}
 }
 // Styling
 .banner {
 	opacity: 1;
 	background: whitesmoke;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
+	height: 780px;
 	margin-top: 53px;
 	margin-bottom: 53px;
 	overflow:hidden;
@@ -43,11 +43,12 @@ $animationSpeed: 8s;
 	.container {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(250px * 3);
+        height: inherit;
+		width: calc(850px * 5);
 	}	
 	.imagem{
         display: flex;
-		height: 100px;
-		width: 250px;
+		height: inherit;
+		width: 850px;
 	}
 }
