@@ -105,7 +105,17 @@ export default function Home(){
                 <div>
                     <div className='card'>
                         <img alt='funcionario' src={Terno}></img>
-                        <h3>Funcionário do mês</h3>
+                        <h3 className='nome'>FLÁVIO ANDRADE</h3>
+                        <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                            Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                            de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                    </div>
+                    <div className='card'>
+                        <img alt='funcionario' src={Terno}></img>
+                        <h3 className='nome'>FLÁVIO ANDRADE</h3>
+                        <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                            Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                            de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
                     </div>
                 </div>
             </div>
