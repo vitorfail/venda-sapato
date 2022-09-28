@@ -1,4 +1,5 @@
 .quem{
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +7,7 @@
     min-height: 450px;
 }
 .quem .quadro{
-    margin-top: 83px;
+    margin-top: 123px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,12 +87,13 @@
     text-align: justify;
 }
 .qualidade{
+    margin-top: 32px;
     background: #f1eae6;;
     width: 100%;
-    height: 650px;
+    height: 750px;
     display: flex;
 }
-.qualidade .left{
+.qualidade .left2{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -99,11 +101,11 @@
     width: 50%;
     height: 100%;
 }
-.qualidade .left h1, .qualidade .left h3{
+.qualidade .left2 h1, .qualidade .left2 h3{
     margin-bottom: 15px;
     margin-left: 65px;
 }
-.qualidade .left h1 strong{
+.qualidade .left2 h1 strong{
     font-family: Roboto forte;
 }
 .qualidade .right{
@@ -119,7 +121,7 @@
     width: 80%;
     height: 80%;
 }
-.qualidade .left .vantagens{
+.qualidade .left2 .vantagens{
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 0px;
@@ -128,7 +130,7 @@
     flex-direction: column;
     justify-content: baseline;
 }
-.qualidade .left .vantagens h3{
+.qualidade .left2 .vantagens h3{
     color: black;
     font-size: 19px;
     text-align: start;
@@ -136,10 +138,11 @@
     background: white;
     height: 45px;
 }
-.qualidade .left .vantagens h3 strong{
+.qualidade .left2 .vantagens h3 strong{
     font-size: 30px;
 }
 .logos{
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -159,6 +162,8 @@
     scale: 0.9;
 }
 .rh{
+    margin-top: 43px;
+    margin-bottom: 43px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -168,11 +173,14 @@
     min-height: 640px;
 }
 .rh h2{
-    font-weight: 900;
     padding-bottom: 23px;
-    margin: 10px;
-    font-size: 30px;
-    font-family: Roboto normal;
+    margin: 40px;
+
+}
+.rh h2 strong{
+    font-family: Roboto fina;
+    font-weight: bold;
+    font-size: 33px;
 }
 .rh h2::before{
     content: "";
@@ -181,7 +189,7 @@
     width: 120px;
     height: 1px;
     background: #ddd;
-    bottom: -60px;
+    bottom: -62px;
     left: calc(50% - 60px);
 }
 .rh h2::after{
@@ -197,19 +205,24 @@
 .rh .card{
     opacity: 0;
     align-items: center;
-    margin: 10px;
-    width: 350px;
-    height: 450px;
+    margin: 20px;
+    width: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.2);
+}
+.rh .card:hover{
+    transition: all ease 0.4s;
+    transform: translateY(-15px);
 }
 .rh .card .nome{
     padding: 15px;
     font-family: Roboto media;
 }
 .rh .card .descri{
+    font-size: 17px;
     width: 90%;
     text-align: justify;
 }

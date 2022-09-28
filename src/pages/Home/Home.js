@@ -71,7 +71,6 @@ export default function Home(){
                     <AparecerDireita>
                         <div className='sede-direita'>
                             <div className='misao-visao-valores'>
-
                                 <h2 style={{textAlign:'left'}}>Missão</h2>
                                 <h3 style={{textAlign:'left'}}><strong>☑</strong>Inspirar e transformar a vida das pessoas com esporte e lazer.</h3>
                             </div>
@@ -88,7 +87,7 @@ export default function Home(){
                 </div>
             </div>
             <div className='qualidade'>
-                <div className='left'>
+                <div className='left2'>
                     <h1>Nossa maior qualidade é a <strong>velocidade de entrega</strong></h1>
                     <h3>Sabemos o quanto os serviços de entrega brasileiro são defasados por conta das vias precárias, mas mesmo assim entregamos no prazo e com qualidade</h3>
                     <div className='vantagens'>
@@ -103,7 +102,7 @@ export default function Home(){
             </div>
             <div className='rh'>
                 <div>
-                    <h2>Nossos funcionários</h2>
+                    <h2><strong>NOSSOS FUNCIONÁRIOS</strong></h2>
                 </div>
                 <div style={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
                     <AparecerCima>
@@ -115,21 +114,51 @@ export default function Home(){
                                 de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
                         </div>
                     </AparecerCima>
-                    <div className='card'>
-                        <img alt='funcionario' src={Terno2}></img>
-                        <h3 className='nome'>ALEXANDRE BEZERRA</h3>
-                        <h3 className='descri'>Gerente e administrador. Formado em administração na 
-                            Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
-                            de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
-                    </div>
-                    <div className='card'>
-                        <img alt='funcionario' src={Terno3}></img>
-                        <h3 className='nome'>MARIA ALICE</h3>
-                        <h3 className='descri'>Gerente e administrador. Formado em administração na 
-                            Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
-                            de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
-                    </div>
-
+                    <AparecerCima>
+                        <div className='card'>
+                            <img alt='funcionario' src={Terno2}></img>
+                            <h3 className='nome'>ALEXANDRE BEZERRA</h3>
+                            <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                                Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                                de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                        </div>
+                    </AparecerCima>
+                    <AparecerCima>
+                        <div className='card'>
+                            <img alt='funcionario' src={Terno3}></img>
+                            <h3 className='nome'>MARIA ALICE</h3>
+                            <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                                Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                                de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                        </div>
+                    </AparecerCima>
+                    <AparecerCima>
+                        <div className='card'>
+                            <img alt='funcionario' src={Terno}></img>
+                            <h3 className='nome'>FLÁVIO ANDRADE</h3>
+                            <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                                Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                                de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                        </div>
+                    </AparecerCima>
+                    <AparecerCima>
+                        <div className='card'>
+                            <img alt='funcionario' src={Terno2}></img>
+                            <h3 className='nome'>ALEXANDRE BEZERRA</h3>
+                            <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                                Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                                de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                        </div>
+                    </AparecerCima>
+                    <AparecerCima>
+                        <div className='card'>
+                            <img alt='funcionario' src={Terno3}></img>
+                            <h3 className='nome'>MARIA ALICE</h3>
+                            <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                                Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                                de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                        </div>
+                    </AparecerCima>
                 </div>
             </div>
             <AparecerCima>

@@ -7,16 +7,18 @@ const AparecerCima = (props) => {
         window.addEventListener('scroll', function() {
             var d = document.getElementsByClassName(props.children.props.className)
             if(d[0] !== null){
-                var position = d[0].getBoundingClientRect();
-                if(position.top+150 < window.innerHeight && position.bottom >= 0){
-                    if(ativo !==true){
-                        setativo(true)    
-                        d[0].id = 'cima'
+                for(let i=0; i < d.length;i++){
+                    var position = d[i].getBoundingClientRect();
+                    if(position.top+150 < window.innerHeight && position.bottom >= 0){
+                        if(ativo !==true){
+                            setativo(true)    
+                            d[i].id = 'cima'
+                        }
                     }
-                }
-                if(position.bottom > window.innerHeight){
-                    d[0].id = ''
-                    setativo(false)    
+                    if(position.bottom -(position.bottom*0.4)> window.innerHeight){
+                        d[i].id = ''
+                        setativo(false)    
+                    }
                 }
             }
         });
