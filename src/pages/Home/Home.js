@@ -29,6 +29,9 @@ import Oakley from '../../logos/oakley.png'
 import Pulma from '../../logos/pulma.png'
 import Vans from '../../logos/vans.png'
 import Terno from '../../icons/caraterno.jpg'
+import Terno2 from '../../icons/terno.jpg'
+import Terno3 from '../../icons/mulher.jpg'
+
 
 export default function Home(){
     const fotos_ = [Banner1, Banner2, Banner3, Banner4, Banner5]
@@ -102,21 +105,31 @@ export default function Home(){
                 <div>
                     <h2>Nossos funcionários</h2>
                 </div>
-                <div style={{display:'flex'}}>
+                <div style={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
+                    <AparecerCima>
+                        <div className='card'>
+                            <img alt='funcionario' src={Terno}></img>
+                            <h3 className='nome'>FLÁVIO ANDRADE</h3>
+                            <h3 className='descri'>Gerente e administrador. Formado em administração na 
+                                Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
+                                de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
+                        </div>
+                    </AparecerCima>
                     <div className='card'>
-                        <img alt='funcionario' src={Terno}></img>
-                        <h3 className='nome'>FLÁVIO ANDRADE</h3>
+                        <img alt='funcionario' src={Terno2}></img>
+                        <h3 className='nome'>ALEXANDRE BEZERRA</h3>
                         <h3 className='descri'>Gerente e administrador. Formado em administração na 
                             Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
                             de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
                     </div>
                     <div className='card'>
-                        <img alt='funcionario' src={Terno}></img>
-                        <h3 className='nome'>FLÁVIO ANDRADE</h3>
+                        <img alt='funcionario' src={Terno3}></img>
+                        <h3 className='nome'>MARIA ALICE</h3>
                         <h3 className='descri'>Gerente e administrador. Formado em administração na 
                             Universade de Delgado, com pós em finanças na Universade do Rio. Com 10 anos
                             de experiência na área de adm ele é um dos nossos contribuintes mais antigos</h3>
                     </div>
+
                 </div>
             </div>
             <AparecerCima>
