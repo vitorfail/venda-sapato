@@ -162,6 +162,10 @@ export default function Home(){
             </div>
             <div className='sede'>
                 <div className='info2'>
+                    <div>
+                        <h1>TRABALHE CONOSCO</h1>
+                        <h3></h3>
+                    </div>
                 </div>
             </div>
             <AparecerCima>
