@@ -1,27 +1,21 @@
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-}
-$animationSpeed: 8s;
 
+$animationSpeed: 2s;
+$quantidade: 3;
+$largura:4500px;
 // Animation
-@keyframes scroll {
+@keyframes scroll2 {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-850px * 5))}
+	100% { transform: translateX(calc(-1*($largura/2)))}
 }
 // Styling
 .banner {
 	opacity: 1;
-	background: whitesmoke;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 780px;
-	margin-top: 53px;
-	margin-bottom: 53px;
 	overflow:hidden;
 	position: relative;
 	
 	&::before,
 	&::after {
-		@include white-gradient;
 		content: "";
 		height: 100px;
 		position: absolute;
@@ -41,14 +35,15 @@ $animationSpeed: 8s;
 	}
 	
 	.container {
-		animation: scroll $animationSpeed linear infinite;
+		animation: scroll2 $animationSpeed ease-in-out 4s;
 		display: flex;
+		justify-content: center;
         height: inherit;
-		width: calc(850px * 5);
+		width: calc($largura * $quantidade);
 	}	
 	.imagem{
         display: flex;
 		height: inherit;
-		width: 850px;
+		width: $largura;
 	}
 }
