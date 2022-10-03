@@ -1,10 +1,9 @@
 import './Painel.css'
 import React, {useState, useRef, useEffect} from 'react'
-import Direita from '../../icons/direita.png'
-import Esquerda from '../../icons/esquerda.png'
 
 export default function Painel(props){
     const ref = useRef([]);
+    const ref2 = useRef([])
     const imagens = props.fotos
     const [ ativodireita, setativodireita] = useState(false)
     const [i, seti] = useState(0)
@@ -14,6 +13,8 @@ export default function Painel(props){
             setativodireita(true)
             if(i+1 === imagens.length){
                 let dist = (100*(i+1))
+                ref2.current[i].style.background = 'white'
+                ref2.current[imagens.length-1].style.background= 'rgba(255, 255, 255, 0.479)'
                 ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)'
                 ref.current[0].style.transform ='translate3d(0%, 0,0)'
                 let quantidade_imagens = imagens.length
@@ -36,6 +37,8 @@ export default function Painel(props){
                 if(i !== 0){
                     if(i+2 === imagens.length){
                         let dist = (100*(i+1))
+                        ref2.current[i+1].style.background = 'white'
+                        ref2.current[i].style.background= 'rgba(255, 255, 255, 0.479)'
                         ref.current[i+1].style.transform ='translate3d(-'+dist+'%, 0,0)'
                         setTimeout(() => ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 100)
                         setTimeout(() => ref.current[0].style.transform ='translate3d(100%, 0,0)' , 500)
@@ -44,6 +47,8 @@ export default function Painel(props){
                     }
                     else{
                         let dist = 100*(i+1)
+                        ref2.current[i].style.background= 'rgba(255, 255, 255, 0.479)'
+                        ref2.current[i+1].style.background = 'white'
                         ref.current[i+1].style.transform ='translate3d(-'+dist+'%, 0,0)'
                         setTimeout(() => ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 100)
                         setTimeout(() =>ref.current[i].style.transform ='translate3d(-'+dist+'%, 0,0)', 500)
@@ -51,6 +56,8 @@ export default function Painel(props){
                     }
                 }
                 else{
+                    ref2.current[i].style.background= 'rgba(255, 255, 255, 0.479)'
+                    ref2.current[i+1].style.background = 'white'
                     ref.current[0].style.transform ='translate3d(-100%, 0,0)'
                     ref.current[0+1].style.transform ='translate3d(-100%, 0,0)'
                     seti(i+1)  
@@ -100,21 +107,29 @@ export default function Painel(props){
         }
     }
     useEffect(() => {
+        if(i === 0){
+            ref2.current[i].style.background = 'white'
+        }
         setTimeout(() => moverdireita(), 2600)
 
     })
     return(
         <div className='painel'>
             <div className='direita'>
-                <img alt='direito' src={Direita} onClick={() => moverdireita()}></img>
+                <div onClick={() => moverdireita()}>&gt;</div>
             </div>
             <div className='esquerda'>
-                <img alt='esquerda' src={Esquerda} onClick={() => moveresquerda()} ></img>
+                <div onClick={() => moveresquerda()}>&lt;</div>
+            </div>
+            <div className='sombra'>
+                {imagens.map((item, index) => (
+                    <div ref={(element) => {ref2.current[index] = element}} key={index} className='ponto'></div>
+                ))}
             </div>
             <div className="banner" style={{width:'100%'}}>
                 <div className='container'>                            
                         {imagens.map((item, index) => (
-                        <div ref={(element) => {ref.current[index] = element;}} style={{backgroundImage:'url('+item+')'}} key={index} className='imagem'>                                    
+                        <div ref={(element) => {ref.current[index] = element}} style={{backgroundImage:'url('+item+')'}} key={index} className='imagem'>                                    
                                 </div>
                             ))}
                 </div>

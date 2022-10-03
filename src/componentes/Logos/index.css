@@ -1,0 +1,21 @@
+.logos{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #f3f5fa;
+    width: 100%;
+    min-height: 100px;
+}
+.logos div{
+    background-size: cover;
+    padding-left: 13px;
+    padding-right: 13px;
+    transition: all ease 0.2s;
+    height: 90px;
+    width: 160px;
+    scale: 0.7;
+}
+.logos div:hover{
+    scale: 0.9;
+}

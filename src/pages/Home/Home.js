@@ -31,6 +31,7 @@ import Vans from '../../logos/vans.png'
 import Terno from '../../icons/caraterno.jpg'
 import Terno2 from '../../icons/terno.jpg'
 import Terno3 from '../../icons/mulher.jpg'
+import Logos from '../../componentes/Logos'
 
 export default function Home(){
     const fotos_ = [Banner1, Banner2, Banner3, Banner4, Banner5]
@@ -39,15 +40,7 @@ export default function Home(){
         <div style={{overflowX:'hidden'}}>
             <Cabecalho></Cabecalho>
             <Painel fotos={fotos_}></Painel>
-            <section className='logos'>
-                <img alt='Adidas' src={Adidas}></img>
-                <img alt='Nike' src={Nike}></img>
-                <img alt='Converse' src={Converse}></img>
-                <img alt='Lacoste' src={Lacoste}></img>
-                <img alt='Oakley' src={Oakley}></img>
-                <img alt='Pulma' src={Pulma}></img>
-                <img alt='Vans' src={Vans}></img>
-            </section>
+            <Logos logos={[Adidas, Nike,Converse,Lacoste,Oakley,Pulma,Vans]}></Logos>
             <div className='quem'>
                 <div className='titulo'>
                     <h1><strong>QUEM SOMOS</strong></h1>
@@ -164,7 +157,7 @@ export default function Home(){
                 <div className='info2'>
                     <div>
                         <h1>TRABALHE CONOSCO</h1>
-                        <h3></h3>
+                        <h3>Temos algumas vagas abertas em diversas áreas. Focamos no crescimento profissionais </h3>
                     </div>
                 </div>
             </div>

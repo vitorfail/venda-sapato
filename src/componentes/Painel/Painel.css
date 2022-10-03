@@ -1,6 +1,25 @@
 .painel{
-    width: 100vw;
+    width: 99vw;
     height: 80vh;
+}
+.painel .sombra{
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    position: absolute;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.61));
+    width: inherit;
+    height: inherit;
+    align-items: flex-end;
+}
+.painel .sombra .ponto{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 23px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.479);
+    width: 8px;
+    height: 8px;
 }
 .painel .banner{
     justify-content: center;
@@ -32,19 +51,27 @@
     margin: 0;
 }
 .painel .direita, .painel .esquerda{
-    width: 56px;
+    width: 64px;
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 99;
+    margin: 19px;
+    z-index: 108;
 }
-.painel .direita img, .painel .esquerda img{
-    width: 34px;
-    height: 34px;
-}
-.painel .direita img:hover, .painel .esquerda img:hover{
+.painel .direita div, .painel .esquerda div{
+    padding: 13px;
+    vertical-align: middle;
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 100;
+    color: white;
+    border:1.9px solid white;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
     cursor: pointer;
 }
 .painel .direita{
