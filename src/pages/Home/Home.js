@@ -169,6 +169,12 @@ export default function Home(){
             <CarroselInfinito largura={'50%'} fotos={fotos_produtos}></CarroselInfinito>
             <div className="contato">
                 <h1>Contato</h1>
+                <div  className='identif' style={{width:'100%', height:'56%', display:'flex', marginTop:"30px", justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+                    <input placeholder='Nome'></input>
+                    <input placeholder='Email'></input>
+                    <input placeholder='Telefone'></input>
+                    <input className='mensagem' placeholder='Mensagem'></input>
+                </div>
             </div>
             <Rodape></Rodape>
         </div>
