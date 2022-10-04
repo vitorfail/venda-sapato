@@ -1,5 +1,5 @@
 header{
-    transition: all ease 0.2s;
+    transition: all ease 0.4s;
     width: 100%;
     height: 70px;
     background: white;
@@ -10,6 +10,8 @@ header{
     align-items: center;
 }
 header.black{
+    transition: all ease 0.4s;
+    background: rgba(31, 11, 7, 0.945);
     position: fixed;
 }
 header .logo{
@@ -19,21 +21,33 @@ header .logo{
     width: 30%;
     height: 100%;
 }
-header .logo img{
+header .logo .l{
+    background: url('../../icons/logo.png') no-repeat center center;
+}
+header .logo .l.black{
+    background: url('../../icons/logo2.png') no-repeat center center;
+}
+header .logo .l, header .logo .l.black{
+    background-size: contain;
     width: 149px;
     height: 27px;
 }
-header .info{
+header .info, header .info.black{
     align-items: center;
     justify-content: center;
     display: flex;
     width: 70%;
     height: 100%;
 }
-header .info h2{
+header .info h2, header .info.black h2{
     font-size: 16px;
-    color: rgb(0, 0, 0);
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+}
+header .info h2{
+    color: rgb(0, 0, 0);
+}
+header .info.black h2{
+    color: white;
 }

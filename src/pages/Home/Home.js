@@ -169,11 +169,25 @@ export default function Home(){
             <CarroselInfinito largura={'50%'} fotos={fotos_produtos}></CarroselInfinito>
             <div className="contato">
                 <h1>Contato</h1>
-                <div  className='identif' style={{width:'100%', height:'56%', display:'flex', marginTop:"30px", justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
-                    <input placeholder='Nome'></input>
-                    <input placeholder='Email'></input>
-                    <input placeholder='Telefone'></input>
-                    <input className='mensagem' placeholder='Mensagem'></input>
+                <AparecerCima>
+                    <h3 className='titulo-contato'>Caso tenha reclamações ou queira tirar dúvidas a respeito de um certo assunto, você pode entrar em contato conosco. </h3>
+                </AparecerCima>
+                <div  className='identif' style={{width:'100%', height:'36%', display:'flex', marginTop:"40px", justifyContent:'center', alignItems:'center'}}>
+                    <AparecerEsquerda>
+                        <div className='contato-user' style={{width:'50%', justifyContent:'space-between',  height:'89%',alignItems:'center', flexDirection:'column', display:'flex'}}>
+                            <input className='info' placeholder='Nome'></input>
+                            <input className='info' placeholder='Email'></input>
+                            <input className='info' placeholder='Telefone'></input>
+                        </div>
+                    </AparecerEsquerda>
+                    <AparecerDireita>
+                        <div className='msg'  style={{width:'50%', display:'flex', height:'100%',justifyContent:'center', alignItems:'center'}}>
+                            <input className='mensagem' placeholder='Mensagem'></input>
+                        </div>
+                    </AparecerDireita>    
+                </div>
+                <div  style={{width:'50%', marginLeft:'11.2%'}}>
+                    <button>Enviar mensagem</button>
                 </div>
             </div>
             <Rodape></Rodape>

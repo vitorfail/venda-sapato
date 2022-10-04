@@ -21,9 +21,9 @@ export default function Cabecalho(){
     return(
         <header className={header? 'black':''}>
             <div className='logo'>
-                <img alt='logo' src={Logo}></img>
+                <div className={header? 'l black':'l'}></div>
             </div>
-            <div  className='info'>
+            <div className={header? 'info black':'info'}>
                 <h2>Quem somos</h2>
                 <h2>Trabalhe conosco</h2>
                 <h2>Produtos</h2>

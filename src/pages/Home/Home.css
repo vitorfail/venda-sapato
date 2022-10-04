@@ -253,7 +253,7 @@
 .contato{
     background: #f1eae6;
     width: 100%;
-    height: 350px;
+    height: 570px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -261,13 +261,20 @@
 .contato .identif{
     margin-top: 23px;
 }
-.contato .identif input{
+.contato .identif .info{
     outline: none;
     border: 1px solid rgb(82, 82, 82);
     font-size: 20px;
-    height: 43px;
-    width: 45%;
+    height: 39px;
+    width: 55%;
     margin: 10px;
+}
+.contato .mensagem{
+    outline: none;
+    border: 1px solid rgb(82, 82, 82);
+    font-size: 20px;
+    width: 89%;
+    height: 89%;
 }
 .quem .titulo strong{
     font-family: Roboto fina;
@@ -279,6 +286,10 @@
     font-family: Roboto fina;
     font-weight: bold;
     font-size: 33px;
+    padding-bottom: 23px;
+}
+.contato h3{
+    text-align: center;
 }
 .contato h1::before{
     content: "";
@@ -300,6 +311,24 @@
     bottom: -20px;
     left: calc(50% - 20px);
 }
+.contato button{
+    vertical-align: middle;
+    transition: all ease 0.1s;
+    padding:4px 12px;    
+    height: 34px;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid black;
+    color: white;
+    background: black;
+}
+.contato button:hover{
+    cursor: pointer;
+    background: white;
+    border: 2px solid black;
+    color: black;
+}
 @keyframes flutuar{
     0%{
         transform: translateY(-30px);
@@ -313,7 +342,43 @@
 }
 @media screen and (max-width:900px){
     .quem .quadro{
-
         flex-direction: column;
+    }
+    .qualidade{
+        height: 816px;
+        flex-direction: column;
+    }
+    .qualidade .left2{
+        width: 100%;
+    }
+    .qualidade .right{
+        width: 100%;
+    }
+    .quem .info{
+        justify-content: center;
+    }
+    .quem .left{
+        padding: 0;
+        width: 90%;
+    }
+    .quem .sede-direita {
+        width: 90%;
+    }
+    .quem .sede-direita .misao-visao-valores h3{
+        font-size: 17px;
+    }
+    .qualidade .left2 h1, .qualidade .left2 h3 {
+        margin-left: 29px;
+        margin-right: 25px;
+        margin-top: 13px;
+    }
+    .logos div {
+        scale: 0.3;
+    }
+    header{
+        flex-direction: column;
+    }
+    header .info, header.black .info{
+        display: none;
     }
 }
