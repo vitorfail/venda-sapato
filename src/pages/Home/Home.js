@@ -167,6 +167,9 @@ export default function Home(){
                 </div>
             </AparecerCima>
             <CarroselInfinito largura={'50%'} fotos={fotos_produtos}></CarroselInfinito>
+            <div className="contato">
+                <h1>Contato</h1>
+            </div>
             <Rodape></Rodape>
         </div>
     )

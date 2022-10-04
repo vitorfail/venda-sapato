@@ -250,6 +250,42 @@
     color: white;
     font-size: 14px;
 }
+.contato{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+.quem .titulo strong{
+    font-family: Roboto fina;
+    font-weight: bold;
+    font-size: 33px;
+}
+.contato h1{
+    font-family: Roboto fina;
+    font-weight: bold;
+    font-size: 33px;
+}
+.contato h1::before{
+    content: "";
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: -60px;
+    left: calc(50% - 60px);
+}
+.contato h1::after{
+    position: relative;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e46647;
+    bottom: -20px;
+    left: calc(50% - 20px);
+}
 @keyframes flutuar{
     0%{
         transform: translateY(-30px);

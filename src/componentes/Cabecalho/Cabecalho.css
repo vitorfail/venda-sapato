@@ -1,4 +1,5 @@
 header{
+    transition: all ease 0.2s;
     width: 100%;
     height: 70px;
     background: white;
@@ -9,7 +10,7 @@ header{
     align-items: center;
 }
 header.black{
-    background: rgb(22, 22, 39,0.94);
+    position: fixed;
 }
 header .logo{
     display: flex;
