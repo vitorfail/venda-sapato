@@ -15,6 +15,7 @@ header.black{
     position: fixed;
 }
 header .logo{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +41,7 @@ header .info, header .info.black{
     height: 100%;
 }
 header .info h2, header .info.black h2{
+    cursor: pointer;
     font-size: 16px;
     padding-left: 20px;
     padding-right: 20px;

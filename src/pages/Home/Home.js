@@ -1,6 +1,6 @@
 import Cabecalho from '../../componentes/Cabecalho/Cabecalho'
 import './Home.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Painel from '../../componentes/Painel/Painel'
 import { CarroselInfinito } from '../../componentes/CarroselInfinito/CarroselInfinito'
 import Banner1 from '../../icons/banner1.png'
@@ -36,6 +36,10 @@ import Logos from '../../componentes/Logos'
 export default function Home(){
     const fotos_ = [Banner1, Banner2, Banner3, Banner4, Banner5]
     const fotos_produtos = [Tennis1, Tennis2, Tennis3, Tennis4, Tennis5, Tennis6, Tennis7, Tennis8]
+    useEffect(() =>{
+        let t = (document.querySelector('.titulo')).getBoundingClientRect()
+        window.scrollTo({ top: t.top, behavior: 'smooth' });
+    })
     return(
         <div style={{overflowX:'hidden'}}>
             <Cabecalho></Cabecalho>

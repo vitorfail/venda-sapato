@@ -1,6 +1,6 @@
 import './Cabecalho.css'
 import React, { useEffect, useState } from 'react'
-import Logo from '../../icons/logo.png'
+import MoverScroll from '../../MoverScroll'
 
 export default function Cabecalho(){
     const [ header, setheader] = useState(false)
@@ -18,16 +18,19 @@ export default function Cabecalho(){
           window.removeEventListener("scroll", rolagem)
         }
     })
+    function subir(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }        
     return(
         <header className={header? 'black':''}>
             <div className='logo'>
-                <div className={header? 'l black':'l'}></div>
+                <div onClick={() => subir()} className={header? 'l black':'l'}></div>
             </div>
             <div className={header? 'info black':'info'}>
-                <h2>Quem somos</h2>
-                <h2>Trabalhe conosco</h2>
-                <h2>Produtos</h2>
-                <h2>Contato</h2>
+                <h2 onClick={() => MoverScroll('.quem')}>Quem somos</h2>
+                <h2 onClick={() => MoverScroll('.qualidade')}>Características</h2>
+                <h2 onClick={() => MoverScroll('.rh')}>Funcionários</h2>
+                <h2 onClick={() => MoverScroll('.contato')}>Contato</h2>
             </div>
         </header>
     )
