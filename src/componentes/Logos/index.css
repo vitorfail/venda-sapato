@@ -19,3 +19,13 @@
 .logos div:hover{
     scale: 0.9;
 }
+@media screen and (max-width:900px){
+    .logos div {
+        padding-left: 6px;
+        padding-right: 7px;
+        transition: all ease 0.2s;
+        height: 88px;
+        width: 123px;
+    }
+
+}

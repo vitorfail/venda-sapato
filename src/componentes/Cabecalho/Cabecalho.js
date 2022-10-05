@@ -1,6 +1,7 @@
 import './Cabecalho.css'
 import React, { useEffect, useState } from 'react'
 import MoverScroll from '../../MoverScroll'
+import Lista from './lista.png'
 
 export default function Cabecalho(){
     const [ header, setheader] = useState(false)
@@ -23,6 +24,7 @@ export default function Cabecalho(){
     }        
     return(
         <header className={header? 'black':''}>
+            <div className='lista'></div>
             <div className='logo'>
                 <div onClick={() => subir()} className={header? 'l black':'l'}></div>
             </div>

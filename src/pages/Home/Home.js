@@ -176,21 +176,21 @@ export default function Home(){
                 <AparecerCima>
                     <h3 className='titulo-contato'>Caso tenha reclamações ou queira tirar dúvidas a respeito de um certo assunto, você pode entrar em contato conosco. </h3>
                 </AparecerCima>
-                <div  className='identif' style={{width:'100%', height:'36%', display:'flex', marginTop:"40px", justifyContent:'center', alignItems:'center'}}>
+                <div  className='identif' >
                     <AparecerEsquerda>
-                        <div className='contato-user' style={{width:'50%', justifyContent:'space-between',  height:'89%',alignItems:'center', flexDirection:'column', display:'flex'}}>
+                        <div className='contato-user' >
                             <input className='info' placeholder='Nome'></input>
                             <input className='info' placeholder='Email'></input>
                             <input className='info' placeholder='Telefone'></input>
                         </div>
                     </AparecerEsquerda>
                     <AparecerDireita>
-                        <div className='msg'  style={{width:'50%', display:'flex', height:'100%',justifyContent:'center', alignItems:'center'}}>
+                        <div className='msg' >
                             <input className='mensagem' placeholder='Mensagem'></input>
                         </div>
                     </AparecerDireita>    
                 </div>
-                <div  style={{width:'50%', marginLeft:'11.2%'}}>
+                <div className='enviar'>
                     <button>Enviar mensagem</button>
                 </div>
             </div>

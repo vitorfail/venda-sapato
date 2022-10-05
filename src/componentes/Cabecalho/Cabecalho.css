@@ -9,6 +9,18 @@ header{
     z-index: 999;
     align-items: center;
 }
+header .lista{
+    background: url('./lista.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 6%;
+    width: 4%;
+    height: 50%;
+}
+header .lista.black{
+
+}
 header.black{
     transition: all ease 0.4s;
     background: rgba(31, 11, 7, 0.945);
@@ -50,6 +62,9 @@ header .info h2, header .info.black h2{
 header .info h2{
     color: rgb(0, 0, 0);
 }
+header .info h2:active, header .info.black h2:active{
+    border-bottom: 2px solid rgb(212, 193, 14);
+} 
 header .info.black h2{
     color: white;
 }

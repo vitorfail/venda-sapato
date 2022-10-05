@@ -250,6 +250,21 @@
     color: white;
     font-size: 14px;
 }
+.identif{
+    width: 100%;
+    height: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg {
+    width: 50%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .contato{
     background: #f1eae6;
     width: 100%;
@@ -257,6 +272,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+.contato-user{
+    width: 50%;
+    justify-content: space-between;
+    height: 89%;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 .contato .identif{
     margin-top: 23px;
@@ -276,11 +299,7 @@
     width: 89%;
     height: 89%;
 }
-.quem .titulo strong{
-    font-family: Roboto fina;
-    font-weight: bold;
-    font-size: 33px;
-}
+
 .contato h1{
     text-align: center;
     font-family: Roboto fina;
@@ -329,6 +348,10 @@
     border: 2px solid black;
     color: black;
 }
+.contato .enviar{
+    width: 50%;
+    margin-left: 11.2%;
+}
 @keyframes flutuar{
     0%{
         transform: translateY(-30px);
@@ -340,7 +363,24 @@
         transform: translateY(-30px);
     }
 }
+@media screen and (max-width:1000px){
+    .qualidade .right img {
+        transition: all ease 0.2s;
+        animation: flutuar 3s linear infinite;
+        width: 50%;
+    }
+}
 @media screen and (max-width:900px){
+    .quem .titulo strong{
+        font-family: Roboto fina;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    .rh h2 strong {
+        font-family: Roboto fina;
+        font-weight: bold;
+        font-size: 23px;
+    }
     .quem .quadro{
         flex-direction: column;
     }
@@ -372,13 +412,29 @@
         margin-right: 25px;
         margin-top: 13px;
     }
-    .logos div {
-        scale: 0.3;
-    }
     header{
         flex-direction: column;
     }
     header .info, header.black .info{
         display: none;
+    }
+    .identif{
+        height: 58%;
+        flex-direction: column;
+    }
+    .contato-user{
+        width: 100%;
+    }
+    .msg {
+        width: 100%;
+    }
+    .contato .enviar{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .contato .identif .info{
+        width: 85%;
     }
 }
