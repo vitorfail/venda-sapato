@@ -412,12 +412,6 @@
         margin-right: 25px;
         margin-top: 13px;
     }
-    header{
-        flex-direction: column;
-    }
-    header .info, header.black .info{
-        display: none;
-    }
     .identif{
         height: 58%;
         flex-direction: column;

@@ -9,17 +9,76 @@ header{
     z-index: 999;
     align-items: center;
 }
+#esconder{
+    display: none;
+}
+#mostrar{
+    display: flex;
+}
+header .mini-menu, header .mini-menu.black{
+    border-radius: 23px;
+    flex-direction: column;
+    position: absolute;
+    z-index: 99;
+    margin-top: 242px;
+    width: 160px;
+    min-height: 12px;
+    height: 200px;
+    max-height: 260px;
+}
+header .mini-menu::before, header .mini-menu.black::before{
+    margin-top: -13px;
+    margin-left: 20px;
+    content: "";
+    width: 23px;
+    height: 23px;
+    transform: rotate(45deg);
+}
+header .mini-menu h2, header .mini-menu.black h2{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+header .mini-menu::before{
+    border-left: 1px solid rgb(48, 48, 48);
+    border-top: 1px solid rgb(48, 48, 48);
+    background: white;
+}
+header .mini-menu.black::before{
+    border-left: 1px solid white;
+    border-top: 1px solid rgb(255, 255, 255);
+    background: rgba(31, 11, 7, 0.945);
+}
+header .mini-menu{
+    border: 1px solid rgb(48, 48, 48);
+    color: rgb(48, 48, 48);
+    background: white;
+}
+header .mini-menu.black{
+    border: 1px solid white;
+    color: white;
+    background: rgba(31, 11, 7, 0.945);
+}
 header .lista{
+    margin: 7px;
     background: url('./lista.png');
+}
+header .lista.black{
+    background: url('./lista2.png');
+}
+header .lista, header .lista.black{
+    display: none;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 6%;
-    width: 4%;
+    width: 6.6%;
     height: 50%;
 }
-header .lista.black{
-
+header .lista:active, header .lista.black:active{
+    animation: rodar 0.2s;
 }
 header.black{
     transition: all ease 0.4s;
@@ -67,4 +126,25 @@ header .info h2:active, header .info.black h2:active{
 } 
 header .info.black h2{
     color: white;
+}
+@keyframes rodar{
+    0%{
+        transition: all ease 0.1s;
+        transform: rotate(90deg);
+    }
+    100%{
+        transition: all ease 0.1s;
+        transform: rotate(180deg);
+    }
+}
+@media screen and (max-width:500px) {
+    header .lista, header .lista.black{
+        display: block;
+    }
+    header{
+        flex-direction: row;
+    }
+    header .info, header.black .info{
+        display: none;
+    }
 }
