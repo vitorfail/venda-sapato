@@ -33,7 +33,7 @@ export default function Cabecalho(){
     }        
     return(
         <header className={header? 'black':''}>
-            <div className='lista' onClick={() => mostrar()}></div>
+            <div className={header? 'lista black':'lista'} onClick={() => mostrar()}></div>
             <div className='logo'>
                 <div onClick={() => subir()} className={header? 'l black':'l'}></div>
             </div>
