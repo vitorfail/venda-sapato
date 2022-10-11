@@ -1,8 +1,8 @@
 import React from "react";
 import './Rodape.css'
-import Insta from '../../icons/inta.png'
-import Twittter from '../../icons/twitter.png'
-import Face from '../../icons/facebook.png'
+import Insta from './inta.png'
+import Twittter from './twitter.png'
+import Face from './facebook.png'
 
 export default function Rodape(){
     return(
